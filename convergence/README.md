@@ -21,16 +21,16 @@ of steps for those samplers was cut in half.
 For Euler, Heun, DPM 2 and PLMS the seeds 0-89 were used to generate data.
 For DDIM and PLMS the seeds 0-59 were used to generate data.
 
-[Convergence](./convergence.png)
+![Convergence](./convergence.png)
 
-| Sampler | $a$              | $b$                    | $chi^2 / \mathrm{NDF}$ | $\chi^2$ Probability |
-|---------|------------------|------------------------|------------------------|----------------------|
-| Euler   | 83.6 + 9.3 - 8.3 | -0.818 + 0.044 - 0.046 | 1.547                  | 0.135                |
-| Heun    | 129 + 28 - 24    | -1.189 + 0.065 - 0.065 | 1.746                  | 0.083                |
-| DPM 2   | 560 + 160 - 120  | -1.635 + 0.083 - 0.086 | 0.935                  | 0.486                |
-| LMS     | 178 + 31 - 27    | -1.325 + 0.057 - 0.059 | 1.459                  | 0.166                |
-| DDIM    | 48.9 + 6.4 - 5.5 | -0.703 + 0.053 - 0.056 | 5.538                  | $4.99 \cdot 10^{-7}$ |
-| PLMS    | 83 + 68 - 33     | -1.21 + 0.19 - 0.23    | 7.086                  | $2.07 \cdot 10^{-9}$ |
+| Sampler | $a$                  | $b$                        | $\chi^2 / \mathrm{NDF}$ | $\chi^2$ Probability | Effective Step Length |
+|---------|----------------------|----------------------------|-------------------------|----------------------|-----------------------|
+| Euler   | $83.6^{+9.3}_{-8.3}$ | $-0.818^{+0.044}_{-0.046}$ | 1.547                   | 0.135                | 1.0                   |
+| Heun    | $129^{+28}_{-24}$    | $-1.189^{+0.065}_{-0.065}$ | 1.746                   | 0.083                | 2.025                 |
+| DPM 2   | $560^{+160}_{-120}$  | $-1.635^{+0.083}_{-0.086}$ | 0.935                   | 0.486                | 1.95                  |
+| LMS     | $178^{+31}_{-27}$    | $-1.325^{+0.057}_{-0.059}$ | 1.459                   | 0.166                | 0.9875                |
+| DDIM    | $48.9^{+6.4}_{-5.5}$ | $-0.703^{+0.053}_{-0.056}$ | 5.538                   | $4.99 \cdot 10^{-7}$ | 0.975                 |
+| PLMS    | $83^{+68}_{-33}$     | $-1.21^{+0.19}_{-0.23}   $ | 7.086                   | $2.07 \cdot 10^{-9}$ | 0.975                 |
 
 In the interval of 10 to 50 effective steps LMS is the fastest k-diffusion sampler.
 Asymptotically DPM 2 seems to be faster but due to the diminishing returns at large numbers of steps this will
