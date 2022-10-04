@@ -26,6 +26,7 @@ A value close to 1 indicates that the assumptions about the uncertainties are co
 A value much greater than 1 indicates that either uncertainties were underestimated or that the model does not accurately describe the data.
 
 Unless noted otherwise I am using [this frontend](https://github.com/JohannesGaessler/stable-diffusion-ipython-shell) for [AUTOMATIC1111 webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui) to generate the data.
+The CFG scale is set to 10.
 
 ## Convergence
 The files in [convergence](./convergence) analyze the convergence speed of deterministic samplers.
