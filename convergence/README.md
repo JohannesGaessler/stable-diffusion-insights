@@ -3,10 +3,9 @@
 All deterministic (non-ancestral) samplers eventually converge against
 the same image as the number of steps approaches infinity.
 However, the speed of this convergence is not necessarily the same.
-Unfortunately the overall look and feel of an image is highly subjective and cannot be measured directly.
-For this reason the average red pixel value for images generated with the prompt "Flowers, red" is measured instead.
-The underlying assumption is that the convergence of high-level features will behave in the same way as this low-level feature.
+This analysis is concerned with determining differences in convergence speed between the deterministic samplers.
 
+The prompt is "Flowers, red".
 The x axis for the fit is the effective number of steps, normalized to the GPU time necessary to generate images
 (on an NVIDIA GTX 1070).
 The model $f(x; a, b) = a x^b$ is assumed to describe the difference in mean red pixel value to the limit at infinite steps.
