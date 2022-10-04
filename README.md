@@ -25,5 +25,7 @@ The value of $\chi^2/\mathrm{NDF}$ is considered to evaluate whether the model f
 A value close to 1 indicates that the assumptions about the uncertainties are correct and that the model accurately describes the data.
 A value much greater than 1 indicates that either uncertainties were underestimated or that the model does not accurately describe the data.
 
+Unless noted otherwise I am using [https://github.com/JohannesGaessler/stable-diffusion-ipython-shell](this frontend) for [https://github.com/AUTOMATIC1111/stable-diffusion-webui](AUTOMATIC1111 webui) to generate the data.
+
 ## Convergence
 The files in [convergence](./convergence) analyze the convergence speed of deterministic samplers.
