@@ -40,3 +40,8 @@ The fit results for DDIM and PLMS are bad (which is why they are not shown in th
 Presumably this is due to technical limitations of their implementations:
 it was not possible to go beyond 500 steps so the reference images relative to which the differences are calculated
 may not have sufficiently converged.
+
+For practical purposes LMS seems to be the fastest.
+Heun and DPM 2 are a close second.
+Euler is significantly slower.
+DDIM and PLMS cannot be compared because the fit results are bad.
