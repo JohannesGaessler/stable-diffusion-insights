@@ -14,6 +14,8 @@ Instead this difference is approximated by generating samples at 1000 steps and 
 the differences relative to those samples.
 To adjust for the fact that the samples presumably still have not fully converged at 1000 steps the model
 is adjusted like this: $f(x; a, b) = a (x^b - 1000^b)$.
+The y axis therefore represents the difference in mean red pixel value between samples generated at x steps relative to the samples generated at 1000 steps.
+
 The x values at which data is collected are spaced logarithmically: 10, 14, 20, 28, 40, 56, 80, 112, 160, 226.
 Because the Heun and DPM 2 samplers approximately require twice as much GPU time as the other samplers the number
 of steps for those samplers was cut in half.
